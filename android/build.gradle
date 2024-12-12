@@ -30,3 +30,8 @@ android {
 dependencies {
     compileOnly "com.facebook.react:react-native:+"
     }
+afterEvaluate {
+    tasks.matching { it.name == "copyDebugJniLibsProjectAndLocalJars" }.all {
+        it.dependsOn("stripDebugDebugSymbols")
+    }
+}
