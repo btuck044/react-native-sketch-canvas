@@ -24,7 +24,7 @@ const SketchCanvasManager = NativeModules.RNSketchCanvasManager || {};
 
 class SketchCanvas extends React.Component {
   static propTypes = {
-    style: ViewPropTypes.style,
+    style: ViewPropTypes?.style,
     strokeColor: PropTypes.string,
     strokeWidth: PropTypes.number,
     onPathsChange: PropTypes.func,
